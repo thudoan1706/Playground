@@ -35,7 +35,6 @@ class Bank:
            - If sum is divisible by 10, then the credit card is valid
            - Otherwise, it is not valid
         """
-        digit_dict = {}
         digit_list = []
         for index in range(len(card.card_number)):
             digit = card.card_number[index]
@@ -43,13 +42,10 @@ class Bank:
                 doubled_num = int(digit) * 2
                 if len(str(doubled_num)) == 2:
                     sum_digit = doubled_num // 10 + doubled_num % 10
-                    digit_dict[index] = sum_digit
                     digit_list.append(sum_digit)
                 else:
-                    digit_dict[index] = doubled_num
                     digit_list.append(doubled_num)
             else:
-                digit_dict[index] = int(digit)
                 digit_list.append(int(digit))
             print(digit_list)
 
