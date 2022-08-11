@@ -24,9 +24,21 @@ class Bank:
         Initialize the bank 
         """
         self.bank_name = bank_name
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 1f0d0afae8ec09912b99ff29738a37a2ce9094ba
     def check_sum(self, card: CreditCard) -> bool:
-        digit_dict = {}
+        """
+        Verify the customer's credit card based on 16 digit number
+        1) If the digit has an odd index, do nothing
+        2) If the digit has an even index, double the digit. 
+           If doubled digit has 2 digits, then split to two separate digit
+        3) Sum every digit and check:
+           - If sum is divisible by 10, then the credit card is valid
+           - Otherwise, it is not valid
+        """
         digit_list = []
         for index in range(len(card.card_number)):
             digit = card.card_number[index]
@@ -34,13 +46,10 @@ class Bank:
                 doubled_num = int(digit) * 2
                 if len(str(doubled_num)) == 2:
                     sum_digit = doubled_num // 10 + doubled_num % 10
-                    digit_dict[index] = sum_digit
                     digit_list.append(sum_digit)
                 else:
-                    digit_dict[index] = doubled_num
                     digit_list.append(doubled_num)
             else:
-                digit_dict[index] = int(digit)
                 digit_list.append(int(digit))
             print(digit_list)
 
