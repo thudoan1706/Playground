@@ -8,6 +8,10 @@ class CreditCard:
         client_name: The name of the client on credit card
         card_number: The 16-digit number of the credit card
     """
+    
+    client_name: str
+    card_number: str
+
     def __init__(self, client_name: str, card_number: str) -> None:
         """
         Initialize the credit card for the customer
@@ -19,16 +23,15 @@ class Bank:
     """
     A bank that the customer registers for the credit card
     """
+    
+    bank_name: str
+        
     def __init__(self, bank_name: str) -> None:
         """
         Initialize the bank 
         """
         self.bank_name = bank_name
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 1f0d0afae8ec09912b99ff29738a37a2ce9094ba
     def check_sum(self, card: CreditCard) -> bool:
         """
         Verify the customer's credit card based on 16 digit number
