@@ -17,7 +17,7 @@ class CreditCard:
 
 class Bank:
     """
-    A bank that customer register for the credit card
+    A bank that the customer registers for the credit card
     """
     def check_sum(self, card: CreditCard) -> bool:
         digit_dict = {}
